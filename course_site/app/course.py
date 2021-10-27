@@ -4,6 +4,7 @@ class Courses():
     def __init__(self):
         self.courses = listdir('app/static/courses')
         
+    
     def get_courses(self):
         return self.courses
 
@@ -13,8 +14,15 @@ class Course():
         self.courseContent = listdir(f'app/static/courses/{self.courseName}')
         
     def get_course_content(self):
-        return self.courseContent
+        sortedContent = []
+        for i in self.courseContent:
+            if not i.endswith(".json"):
+                sortedContent.append(i)
+        sortedContent = sorted(sortedContent, key=self.order)
+        return sortedContent
 
+    def order(self,e):
+        return int(e[0:2])
 
 
 # if you want to run it remove 'app/' from the path  

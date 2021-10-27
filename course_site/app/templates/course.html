@@ -1,4 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="bigger">
+<div class="container">
+{% for video_course in courseContent %}
+        <span class="videoCourse" data-video="{{video_course}}">{{ video_course }}</span>
+{% endfor %}
+</div>
+<div class="video">
+    <video width="320" height="240" controls id="video">
+       <source id="source"
+       src="./../static/courses/{{courseName}}/{{courseContent[0]}}/{{courseContent[0]}}.mp4"
+       type="video/mp4"
+       />
+    </video>
+    <h2>{{courseContent[0]}}</h2>
+</div>
+</div>
+<div class="coursename" data-name="{{courseName}}" style="display: none;"></div>
+<script src="{{ url_for('static', filename='js/course.js') }}"></script>
 {% endblock %}
