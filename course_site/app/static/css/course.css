@@ -12,6 +12,7 @@
 }
 
 .videoCourse{
+    user-select: none;
     width: 300px;
     height: auto;
     border: 1px solid salmon;
