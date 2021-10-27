@@ -2,7 +2,7 @@
 this is a simple website runs locally on my machine using flask python to view the course's videos i have on my laptop
 
 you need to add a dir called courses in the static file then you add the courses in it
-
+```
 ├───app
 │   ├───static
 │   │   ├───courses
@@ -33,3 +33,4 @@ you need to add a dir called courses in the static file then you add the courses
 │   ├───templates
 │   └───__pycache__
 └───__pycache__
+```
